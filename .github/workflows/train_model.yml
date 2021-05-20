@@ -22,13 +22,13 @@ jobs:
       # Connect the Azure Machine Learning Workspace
     - name: Connect Azure Machine Learning Workspace
       id: aml_workspace
-      uses: Azure/aml-workspace@v1
+      uses: github-actions/aml-workspace@v1
       with:
           azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}
     
     # Submit a training run to the Azure Machine Learning
     - name: Submit training run
       id: aml_run
-      uses: Azure/aml-run@v1
+      uses: github-actions/aml-run@v1
       with:
           azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}
