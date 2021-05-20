@@ -8,6 +8,6 @@ dependencies:
   - matplotlib=3.2.2
   - numpy=1.19.0
   - pip:
-    - azureml-defaults==1.8.0
+    - azureml-defaults==1.21.0
 channels:
   - conda-forge

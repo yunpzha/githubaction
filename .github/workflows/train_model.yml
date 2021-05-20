@@ -10,7 +10,7 @@ on:
 
 jobs:
   deployment:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -22,13 +22,15 @@ jobs:
       # Connect the Azure Machine Learning Workspace
     - name: Connect Azure Machine Learning Workspace
       id: aml_workspace
-      uses: github-actions/aml-workspace@v1
+      uses: Azure/aml-workspace@v1
       with:
           azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}
     
     # Submit a training run to the Azure Machine Learning
     - name: Submit training run
       id: aml_run
-      uses: github-actions/aml-run@v1
+      uses: Azure/aml-run@v1
       with:
           azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}
+          
+    # Done
