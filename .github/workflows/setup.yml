@@ -29,6 +29,6 @@ jobs:
     # Login to Azure
     - name: Azure Login
       id: azure_login
-      uses: azure/login@v1
+      uses: test-org/login
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
