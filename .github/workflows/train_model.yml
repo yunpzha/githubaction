@@ -33,4 +33,4 @@ jobs:
       with:
           azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}
           
-    # Done  
+    # Done
