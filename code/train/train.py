@@ -1,9 +1,8 @@
 from azureml.pipeline.core import PipelineEndpoint
 from azureml.core import Workspace
 
-def main(workspace):
+def main(ws):
     print("!!!Start")
-    ws = Workspace.from_config()
     print(ws)
     print("------------")
 
@@ -19,4 +18,5 @@ def main(workspace):
     return pipeline_run
 
 if __name__ == "__main__":
-    main(workspace)
+    ws = Workspace.from_config()
+    main(ws)
