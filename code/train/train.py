@@ -4,15 +4,7 @@ from azureml.core.authentication import ServicePrincipalAuthentication
 from azureml.core.authentication import AzureCliAuthentication
 import os
 
-#ws = Workspace.from_config()
-
-cli_auth = AzureCliAuthentication()
-ws = Workspace(
-    subscription_id="2acfc131-8c35-4698-95d8-df43d793ca8b",
-    resource_group="MLOpsGithub",
-    workspace_name="demoAzMLWorkspace",
-    auth=cli_auth
-    )
+ws = Workspace.from_config()
     
 published_pipeline = PipelineEndpoint.get(workspace=ws, name="aml-run-val")
 print(published_pipeline)
