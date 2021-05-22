@@ -8,7 +8,7 @@ from azureml.core.authentication import ServicePrincipalAuthentication
 svc_pr_password = "QOFpAEY8.0o7~_Z61cX7YkPFnw~_-M_QcI"
 
 svc_pr = ServicePrincipalAuthentication(
-    tenant_id="b5d973af-dab6-44d1-9141-cb325843ffd2",
+    tenant_id="72f988bf-86f1-41af-91ab-2d7cd011db47",
     service_principal_id="b5d973af-dab6-44d1-9141-cb325843ffd2",
     service_principal_password=svc_pr_password)
 
