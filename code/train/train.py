@@ -6,6 +6,9 @@ from azureml.core import Workspace
 import os
 from azureml.core.authentication import ServicePrincipalAuthentication
 
+def main(workspace):
+    print(workpsace)
+
 svc_pr_password = "QOFpAEY8.0o7~_Z61cX7YkPFnw~_-M_QcI"
 
 svc_pr = ServicePrincipalAuthentication(
