@@ -19,4 +19,4 @@ def main(workspace):
     return pipeline_run
 
 if __name__ == "__main__":
-    main()
+    main(workspace)
