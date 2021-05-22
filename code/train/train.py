@@ -7,15 +7,20 @@ import os
 from azureml.core.authentication import ServicePrincipalAuthentication
 
 def main(workspace):
-    print(workspace)
-    published_pipeline = PipelineEndpoint.get(workspace=workspace, name="aml-run-val")
-    print(published_pipeline)
+    global ws = workspace
+    print(ws)
 
-    print("------------")
-    pipeline_run = published_pipeline.submit("aml-run-val")
+    
+    
+published_pipeline = PipelineEndpoint.get(workspace=ws, name="aml-run-val")
+print(published_pipeline)
 
-    print("run completed")
+print("submitting pipeline aml-run-val")
+pipeline_run = published_pipeline.submit("aml-run-val")
+print("pipeline aml-run-val run completed ")
 
+    
+    
 """
 svc_pr_password = "QOFpAEY8.0o7~_Z61cX7YkPFnw~_-M_QcI"
 svc_pr = ServicePrincipalAuthentication(
