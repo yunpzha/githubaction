@@ -5,9 +5,9 @@ from azureml.core import Workspace
 
 import os
 from azureml.core.authentication import ServicePrincipalAuthentication
-
-def main(workspace):
-    global ws = workspace
+global ws
+def main(ws):
+    #global ws = workspace
     print(ws)
 
     
