@@ -1,0 +1,2 @@
+# The script to run.
+script: run_config.py
