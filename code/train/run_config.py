@@ -2,7 +2,7 @@ from azureml.pipeline.core import PipelineEndpoint
 from azureml.core import Workspace
 
 def main(workspace):
-    pring("!!!Start")
+    print("!!!Start")
     ws = Workspace.from_config()
     print(ws)
     print("------------")
