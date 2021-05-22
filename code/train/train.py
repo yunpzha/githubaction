@@ -14,5 +14,3 @@ print("------------")
 pipeline_run = published_pipeline.submit("aml-run-val")
 
 print("run completed")
-
-return pipeline_run
