@@ -21,11 +21,11 @@ jobs:
     
       - name: Connect/Create Azure Machine Learning Workspace
         id: aml_workspace
-        uses: github-actions/aml-workspace@v1
+        uses: Azure/aml-workspace@v1
         with:
             azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}
             
-      - uses: github-actions/aml-compute@v1
+      - uses: Azure/aml-compute@v1
         id: aml_compute
         with:
           azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}
@@ -33,7 +33,7 @@ jobs:
       # # Register model in Azure Machine Learning model registry
       - name: Register model
         id: aml_registermodel
-        uses: github-actions/aml-registermodel@ashishonce/adddefaulttags
+        uses: Azure/aml-registermodel@ashishonce/adddefaulttags
         with:
              azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}
              run_id:  ${{ github.event.client_payload.data.runId }}
@@ -42,7 +42,7 @@ jobs:
       # Deploy your model to dev (this is optional)
       - name: Dev Deploy
         id: aml_dev_deploy
-        uses: github-actions/aml-deploy@v1
+        uses: Azure/aml-deploy@v1
         with:
             azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}
             model_name:  "${{ steps.aml_registermodel.outputs.model_name }}"
@@ -57,7 +57,7 @@ jobs:
        # Deploy your model to production
       - name: Prod Deploy
         id: aml_prod_deploy
-        uses: github-actions/aml-deploy@v1
+        uses: Azure/aml-deploy@v1
         with:
            azure_credentials: ${{ secrets.AZURE_CREDENTIALS }}
            model_name:  "${{ steps.aml_registermodel.outputs.model_name }}"  
