@@ -1,22 +1,18 @@
 from azureml.pipeline.core import PipelineEndpoint
 from azureml.core import Workspace
+ws = Workspace.from_config()
 
-def main(ws):
-    print("!!!Start")
-    print(ws)
-    print("------------")
+print("!!!Start")
+print(ws)
+print("------------")
 
-    published_pipeline = PipelineEndpoint.get(workspace=ws, name="aml-run-val")
-    print(published_pipeline)
+published_pipeline = PipelineEndpoint.get(workspace=ws, name="aml-run-val")
+print(published_pipeline)
 
-    print("------------")
+print("------------")
 
-    pipeline_run = published_pipeline.submit("aml-run-val")
+pipeline_run = published_pipeline.submit("aml-run-val")
 
-    print("run completed")
-    
-    return pipeline_run
+print("run completed")
 
-if __name__ == "__main__":
-    ws = Workspace.from_config()
-    main(ws)
+return pipeline_run
