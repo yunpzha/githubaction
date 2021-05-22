@@ -9,15 +9,13 @@ global ws
 def main(ws):
     #global ws = workspace
     print(ws)
-
     
-    
-published_pipeline = PipelineEndpoint.get(workspace=ws, name="aml-run-val")
-print(published_pipeline)
+    published_pipeline = PipelineEndpoint.get(workspace=ws, name="aml-run-val")
+    print(published_pipeline)
 
-print("submitting pipeline aml-run-val")
-pipeline_run = published_pipeline.submit("aml-run-val")
-print("pipeline aml-run-val run completed ")
+    print("submitting pipeline aml-run-val")
+    pipeline_run = published_pipeline.submit("aml-run-val")
+    print("pipeline aml-run-val run completed ")
 
     
     
