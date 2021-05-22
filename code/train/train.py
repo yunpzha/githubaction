@@ -1,6 +1,7 @@
 from azureml.pipeline.core import PipelineEndpoint
 from azureml.core import Workspace
 # ws = Workspace.from_config()
+#This is test
 
 import os
 from azureml.core.authentication import ServicePrincipalAuthentication
