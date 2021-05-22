@@ -29,7 +29,7 @@ print("!!!Start")
 print(ws)
 print("------------")
 
-published_pipeline = PipelineEndpoint.get(workspace=ws, name="aml-run-val")
+published_pipeline = PipelineEndpoint.get(workspace=workpsace, name="aml-run-val")
 print(published_pipeline)
 
 print("------------")
