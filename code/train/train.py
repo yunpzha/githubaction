@@ -11,7 +11,7 @@ print(published_pipeline)
 
 print("submitting pipeline aml-run-val")
 pipeline_run = published_pipeline.submit("aml-run-val")
-print("pipeline aml-run-val run completed ")
+print("pipeline aml-run-val run completed")
 
     
 """
