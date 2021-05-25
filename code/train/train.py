@@ -27,6 +27,7 @@ print("pipeline aml-run-val run completed")
     
 """
 ws = Workspace.from_config()
+"""
 
 
 
