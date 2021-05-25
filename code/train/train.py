@@ -3,18 +3,7 @@ from azureml.core import Workspace
 from azureml.core.authentication import ServicePrincipalAuthentication
 from azureml.core.authentication import AzureCliAuthentication
 import os
-
-ws = Workspace.from_config()
-    
-published_pipeline = PipelineEndpoint.get(workspace=ws, name="aml-run-val")
-print(published_pipeline)
-
-print("submitting pipeline aml-run-val")
-pipeline_run = published_pipeline.submit("aml-run-val")
-print("pipeline aml-run-val run completed")
-
-    
-"""
+  
 svc_pr_password = "QOFpAEY8.0o7~_Z61cX7YkPFnw~_-M_QcI"
 svc_pr = ServicePrincipalAuthentication(
     tenant_id="72f988bf-86f1-41af-91ab-2d7cd011db47",
@@ -27,7 +16,17 @@ ws = Workspace(
     workspace_name="demoAzMLWorkspace",
     auth=svc_pr
     )
+    
+published_pipeline = PipelineEndpoint.get(workspace=ws, name="aml-run-val")
+print(published_pipeline)
+
+print("submitting pipeline aml-run-val")
+pipeline_run = published_pipeline.submit("aml-run-val")
+print("pipeline aml-run-val run completed")
+
+    
 """
+ws = Workspace.from_config()
 
 
 
